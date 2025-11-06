@@ -1,0 +1,22 @@
+programa {
+  funcao inicio() {
+    inteiro idade
+    escreva(" Sistema de Obrigatoriedade de Voto\n")
+    escreva("Por favor, digite a idade do eleitor: ")
+    leia(idade)
+    escreva("\n--- Situaзгo do Eleitor ---\n")
+    se (idade >= 18 e idade <= 70)
+    {
+      escreva(" Voto Obrigatório.\n")
+    }
+    senao se (idade == 16 ou idade == 17 ou idade > 70)
+    {
+      escreva("Voto Facultativo.\n")
+    }
+    senao
+    {
+      escreva("Não pode votar.\n")
+      escreva("A idade mínima para votar é 16 anos.\n")
+    }
+  }
+}
