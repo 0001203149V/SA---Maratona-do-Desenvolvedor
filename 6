@@ -1,0 +1,20 @@
+programa {
+  funcao inicio() {
+    inteiro ano_nascimento, ano_atual, idade
+    escreva("Digite o ano de nascimento do colaborador: ")
+    leia(ano_nascimento)
+    escreva("Digite o ano atual: ")
+    leia(ano_atual)
+    idade = ano_atual - ano_nascimento
+    escreva("\nA idade do colaborador é: ", idade, " anos.\n")
+    se (idade >= 18)
+    {
+      escreva("Pode ser contratado.")
+    }
+    senao
+    {
+      escreva("Não pode ser contratado.")
+    }
+    
+  }
+}
