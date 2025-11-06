@@ -1,0 +1,32 @@
+programa {
+  funcao inicio() {
+    inteiro idade
+    inteiro tempo_contribuicao
+    const inteiro IDADE_MINIMA = 65
+    const inteiro CONTRIBUICAO_MINIMA = 30
+    escreva(" Sistema de Verificaзгo de Aposentadoria (RH)\n")
+    escreva("Por favor, digite a idade do funcionário (em anos): ")
+    leia(idade)
+    escreva("Por favor, digite o tempo de contribuição (em anos): ")
+    leia(tempo_contribuicao)
+    escreva("\n--- Resultado da Análise ---\n")
+    se (idade > IDADE_MINIMA ou tempo_contribuicao > CONTRIBUICAO_MINIMA)
+    {
+      escreva("Pode se aposentar!\n")
+      escreva("Motivos: \n")
+      se (idade > IDADE_MINIMA) {
+        escreva("- Idade (", idade, " anos) й superior a ", IDADE_MINIMA, " anos.\n")
+      }
+      se (tempo_contribuicao > CONTRIBUICAO_MINIMA) {
+        escreva("- Tempo de Contribuiзгo (", tempo_contribuicao, " anos) й superior a ", CONTRIBUICAO_MINIMA, " anos.\n")
+      }
+    }
+    senao
+    {
+      escreva(" **Nгo pode se aposentar.**\n")
+      escreva("Requisitos nгo atingidos: \n")
+      escreva("- Idade (", idade, " anos). Necessбrio mais de ", IDADE_MINIMA, " anos.\n")
+      escreva("- Tempo de Contribuiзгo (", tempo_contribuicao, " anos). Necessбrio mais de ", CONTRIBUICAO_MINIMA, " anos.\n")
+    }
+  }
+}
