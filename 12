@@ -1,0 +1,18 @@
+programa {
+  funcao inicio() {
+    real medida_peca
+    const real MIN_ACEITAVEL = 5.0
+    const real MAX_ACEITAVEL = 5.5
+    escreva("Digite a medida da peça (em cm): ")
+    leia(medida_peca)
+    escreva("\nLimites aceitáveis: entre ", MIN_ACEITAVEL, " cm e ", MAX_ACEITAVEL, " cm (inclusive).\n")
+    se (medida_peca >= MIN_ACEITAVEL e medida_peca <= MAX_ACEITAVEL)
+    {
+      escreva("\n Peça Aprovada. Medida dentro do padrão de qualidade.")
+    }
+    senao
+  {
+    escreva("\n Peça Rejeitada. Medida fora do padrão de qualidade.")
+  }
+  }
+}
