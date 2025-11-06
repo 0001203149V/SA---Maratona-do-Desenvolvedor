@@ -1,0 +1,32 @@
+programa {
+  funcao inicio() {
+    real valor_compra
+    real valor_final
+    cadeia dia_semana
+    const real TAXA_DESCONTO = 0.10
+    escreva("Sistema de Desconto de Fim de Semana\n")
+    escreva("Por favor, digite o valor total da compra: R$ ")
+    leia(valor_compra)
+    escreva("Por favor, digite o dia da semana (por extenso): ")
+    leia(dia_semana)
+    se ((dia_semana == "Sábado" ou dia_semana == "sábado") ou (dia_semana == "Domingo" ou dia_semana == "domingo"))
+    {
+     real desconto = valor_compra * TAXA_DESCONTO
+     valor_final = valor_compra - desconto
+     escreva("\n--- Compra Finalizada ---\n")
+     escreva("Dia da Semana: ", dia_semana, "\n")
+     escreva("PARABÉNS! Você ganhou 10% de desconto!\n")
+     escreva("Valor Original: R$ ", valor_compra, "\n")
+     escreva("Desconto (10%): R$ ", desconto, "\n")
+     escreva("Valor Final: R$ ", valor_final, "\n")
+    }
+    senao
+    {
+      valor_final = valor_compra
+      escreva("\n--- Compra Finalizada ---\n")
+      escreva("Dia da Semana: ", dia_semana, "\n")
+      escreva("Desconto não aplicável. O desconto de 10% é válido apenas para Sábado e Domingo.\n")
+      escreva("Valor Final: R$ ", valor_final, "\n")
+    }
+  }
+}
