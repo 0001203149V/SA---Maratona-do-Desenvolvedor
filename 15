@@ -1,0 +1,20 @@
+programa {
+  funcao inicio() {
+    cadeia USUARIO_CORRETO = "admin"
+    cadeia SENHA_CORRETA = "123456"
+    cadeia usuario_digitado, senha_digitada
+    escreva("--- Sistema de Login ---\n")
+    escreva("Usuário: ")
+    leia(usuario_digitado)
+    escreva("Senha: ")
+    leia(senha_digitada)
+    se (usuario_digitado == USUARIO_CORRETO e senha_digitada == SENHA_CORRETA)
+    {
+      escreva("\n Login bem-sucedido. Bem-vindo ao sistema!")
+    }
+    senao 
+    {
+      escreva("\n Usuário ou senha inválidos. Tente novamente.")
+    }
+  }
+}
