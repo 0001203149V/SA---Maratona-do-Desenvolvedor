@@ -1,0 +1,50 @@
+programa {
+  funcao inicio() {
+    inteiro opcao_escolhida
+    real saldo = 1000.00
+    real valor_transacao
+    escreva(" Bem-vindo ao caixa eletrônico (Simples)\n")
+    escreva("Seu saldo atual й: R$ ", saldo, "\n\n")
+    escreva("Selecione a operação desejada:\n")
+    escreva("1 - Ver Saldo\n")
+    escreva("2 - Depositar\n")
+    escreva("3 - Sacar\n")
+    escreva("Digite sua opзгo (1, 2 ou 3): ")
+    leia(opcao_escolhida)
+    escreva("\n--- Executando Operação ---\n")
+    escolha (opcao_escolhida)
+    {
+      caso 1:
+      escreva("Operação: Ver Saldo\n")
+      escreva("Seu saldo atual й: R$ ", saldo, "\n")
+      pare
+      caso 2:
+      escreva("Operação: Depositar\n")
+      escreva("Digite o valor que deseja depositar: R$ ")
+      leia(valor_transacao)
+      saldo = saldo + valor_transacao
+      escreva("\nDepósito de R$ ", valor_transacao, " realizado com sucesso!\n")
+      escreva("Novo saldo: R$ ", saldo, "\n")
+      pare
+      caso 3:
+      escreva("Operação: Sacar\n")
+      escreva("Digite o valor que deseja sacar: R$ ")
+      leia(valor_transacao)
+      se (valor_transacao <= saldo)
+    {
+      saldo = saldo - valor_transacao
+      escreva("\nSaque de R$ ", valor_transacao, " realizado com sucesso!\n")
+      escreva("Novo saldo: R$ ", saldo, "\n")
+    }
+    senao
+    {
+      escreva("\n Erro: Saldo insuficiente para realizar este saque.\n")
+      escreva("Saldo disponнvel: R$ ", saldo, "\n")
+    }
+    pare
+    caso contrario:
+    escreva("Erro: Opção digitada (", opcao_escolhida, ") й inválida. Tente novamente.\n")
+    escreva("Obrigado por utilizar nosso Caixa Eletrônico.\n")
+    }
+  }
+}
