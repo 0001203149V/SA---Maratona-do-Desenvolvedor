@@ -1,0 +1,19 @@
+programa {
+  funcao inicio() {
+    real valor_compra
+    const real LIMITE_FRETE = 100.00
+    escreva("Digite o valor total da compra (R$): ")
+    leia(valor_compra)
+    escreva("\nRegra: Frete grátis para compras acima de R$ ", LIMITE_FRETE, "\n")
+    se (valor_compra >= LIMITE_FRETE)
+    {
+      escreva("\n Parabéns! Você ganhou Frete Grátis!")
+    }
+    senao
+    {
+      real falta_para_frete = LIMITE_FRETE - valor_compra
+      escreva("\n Não ganhou frete grátis.")
+      escreva("Faltam R$ ", falta_para_frete, " para atingir o frete grátis.\n")
+    }
+  }
+}
