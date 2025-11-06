@@ -1,0 +1,41 @@
+programa {
+  funcao exibe_menu() {
+    escreva("===================================\n")
+    escreva("|       CAIXA ELETRФNICO          |\n")
+    escreva("===================================\n")
+    escreva("| [1] - Consultar Saldo           |\n")
+    escreva("| [2] - Realizar Saque            |\n")
+    escreva("| [3] - Realizar Depósito         |\n")
+    escreva("| [0] - Sair                      |\n")
+    escreva("===================================\n")
+    escreva("Digite a opção desejada: ")
+  }
+  funcao inicio() {
+  inteiro opcao = -1
+  faca 
+  {
+    exibe_menu()
+    leia(opcao)
+    escolha (opcao)
+    {
+      caso 1:
+      escreva("\nOpção [1] selecionada: Consultando Saldo...\n\n")
+      pare 
+      caso 2: 
+      escreva("\nOpção [2] selecionada: Realizando Saque...\n\n")
+      pare 
+      caso 3:
+      escreva("\nOpção [3] selecionada: Realizando Depósito...\n\n")
+      pare 
+      caso 0:
+      escreva("\nOpção [0] selecionada. Encerrando a sessão.\n")
+      pare 
+      caso contrario:
+      escreva("\nOpção inválida! Por favor, escolha uma opção entre 0 e 3.\n\n")
+      pare 
+    }
+    } enquanto (opcao != 0)
+    escreva("\nObrigado por utilizar o Caixa Eletrônico!\n")
+
+  }
+}
