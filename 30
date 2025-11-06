@@ -1,0 +1,21 @@
+programa {
+  funcao inicio() {
+    real producao_hora = 1.0
+    real total_producao = 0.0
+    escreva("--- Calculadora de Produção Diária --- \n")
+    escreva("Por favor, digite os valores de produção de cada hora.\n")
+    escreva("Para finalizar e ver o total, digite 0 (zero).\n\n")
+    enquanto (producao_hora != 0) {
+      escreva("Produção da hora (ou 0 para parar): ")
+      leia(producao_hora)
+      se (producao_hora != 0) {
+        total_producao = total_producao + producao_hora
+        escreva("Valor ", producao_hora, " adicionado ao total.\n")
+      }
+    }
+    escreva("\n--------------------------------------\n")
+    escreva("? PARADA SOLICITADA.\n")
+    escreva("A produção total do dia é: ", total_producao, "\n")
+    escreva("--------------------------------------\n")
+  }
+}
