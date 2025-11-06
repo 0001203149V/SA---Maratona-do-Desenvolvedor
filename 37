@@ -1,0 +1,25 @@
+programa {
+  funcao inicio() {
+    inteiro idade = 0
+    real salario = 0.0
+    inteiro contador_criterio = 0
+    para (inteiro i = 1; i <= 20; i++)
+    {
+      escreva("--- Funcionário #", i, " ---\n")
+      escreva("Digite a idade do funcionário: ")
+      leia(idade)
+      escreva("Digite o salário (Ex: 3500.00): R$ ")
+      leia(salario)
+      se (idade > 30 e salario > 3000.00)
+      {
+        contador_criterio = contador_criterio + 1
+      }
+      escreva("\n") 
+    }
+    escreva("=========================================\n")
+    escreva("Análise Concluída!\n")
+    escreva("Total de funcionários entrevistados: 20\n")
+    escreva("Funcionários com mais de 30 anos E salário acima de R$ 3000,00: ", contador_criterio, "\n")
+    escreva("=========================================\n")
+  }
+}
