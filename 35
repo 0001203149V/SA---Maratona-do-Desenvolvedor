@@ -1,0 +1,12 @@
+programa {
+  funcao inicio() {
+    inteiro tempo
+    escreva("--- Simulaзгo de Lanзamento de Foguete ---\n\n")
+    para (tempo = 10; tempo >= 0; tempo--) {
+      escreva("Contagem: ", tempo, "\n")
+    }
+    escreva("\n==================================\n")
+    escreva("         ?? FOGO! ??          \n")
+    escreva("==================================\n")
+  }
+}
