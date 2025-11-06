@@ -1,0 +1,50 @@
+programa {
+  funcao inicio() {
+    inteiro quantidade_paes
+    inteiro quantidade_broas
+
+
+    const real PRECO_PAO = 0.75
+    const real PRECO_BROA = 1.50
+
+
+    real total_paes
+    real total_broas
+    real total_arrecadado
+
+
+    escreva("--- CÁLCULO DE VENDAS DA PADARIA ---\n")
+
+
+    escreva("Informe a quantidade de PÃES franceses vendidos (R$ ", PRECO_PAO, "): ")
+    leia(quantidade_paes)
+
+
+    escreva("Informe a quantidade de BROAS vendidas (R$ ", PRECO_BROA, "): ")
+    leia(quantidade_broas)
+
+
+
+    total_paes = quantidade_paes * PRECO_PAO
+
+
+    total_broas = quantidade_broas * PRECO_BROA
+
+
+    total_arrecadado = total_paes + total_broas
+
+
+    escreva("\n--- RESUMO DA VENDA ---\n")
+
+
+    escreva("Total PÃES arrecadado: R$ ", total_paes, "\n")
+    escreva("Total BROAS arrecadado: R$ ", total_broas, "\n")
+
+    escreva("------------------------------------\n")
+    escreva("VALOR TOTAL ARRECADADO: R$ ", total_arrecadado, "\n")
+    escreva("------------------------------------\n")
+
+  
+  
+  }
+}
