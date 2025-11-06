@@ -1,0 +1,16 @@
+programa {
+  funcao inicio() {
+    inteiro eh_socio
+    escreva("Você é sócio do clube? \n")
+    escreva("Digite [1] para SIM ou [2] para NÃO: ")
+    leia(eh_socio)
+    se (eh_socio == 1)
+    {
+      escreva("\n Acesso permitido. Bem-vindo(a) à festa!")
+    }
+    senao 
+    {
+      escreva("\n Acesso negado. A entrada é permitida apenas para sócios.")
+    }
+  }
+}
