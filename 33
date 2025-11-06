@@ -1,0 +1,13 @@
+programa {
+  funcao inicio() {
+    inteiro soma_total = 0
+    inteiro numero_atual
+    escreva("--- Calculadora de Soma de 1 a 100 ---\n\n")
+    para (numero_atual = 1; numero_atual <= 100; numero_atual++) {
+      soma_total = soma_total + numero_atual
+    }
+    escreva("\n*************************************************\n")
+    escreva("A soma de todos os números inteiros de 1 até 100 é: ", soma_total, "\n")
+    escreva("*************************************************\n")
+  }
+}
