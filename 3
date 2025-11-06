@@ -1,0 +1,38 @@
+programa {
+  funcao inicio() {
+    real valor_total_conta
+
+    inteiro numero_pessoas
+
+    real valor_por_pessoa
+
+
+    escreva("--- DIVISÃO DE CONTA DE RESTAURANTE ---\n")
+
+
+    escreva("Informe o valor TOTAL da conta (R$): ")
+    leia(valor_total_conta)
+
+
+    escreva("Informe o NÚMERO DE PESSOAS na mesa: ")
+    leia(numero_pessoas)
+
+
+    se (numero_pessoas > 0)
+    {
+      valor_por_pessoa = valor_total_conta / numero_pessoas
+
+
+      escreva("\n--- RESULTADO DA DIVISÃO ---\n")
+      escreva("Valor Total da Conta: R$ ", valor_total_conta, "\n")
+      escreva("Número de Pessoas: ", numero_pessoas, "\n")
+      escreva("------------------------------------\n")
+      escreva("VALOR INDIVIDUAL A PAGAR: R$ ", valor_por_pessoa, "\n")
+      escreva("------------------------------------\n")
+    }
+    senao 
+    {
+      escreva("\nERRO: O número de pessoas deve ser maior que zero para realizar a divisão da conta.\n")
+    }
+  }
+}
