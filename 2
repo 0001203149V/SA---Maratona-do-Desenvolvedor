@@ -1,0 +1,38 @@
+programa {
+  funcao inicio() {
+    real distancia_percorrida
+    real combustivel_gasto
+
+
+    real consumo_medio
+
+
+    escreva("--- CÁLCULO DE CONSUMO DE COMBUSTÍVEL ---\n")
+
+
+    escreva("Informe a distância total percorrida (em Km): ")
+    leia(distancia_percorrida)
+
+
+    escreva("Informe o total de combustível gasto (em Litros): ")
+    leia(combustivel_gasto)
+
+
+    se (combustivel_gasto > 0.0)
+    {
+      consumo_medio = distancia_percorrida / combustivel_gasto
+
+
+      escreva("\n--- RESULTADO ---\n")
+      escreva("Distância percorrida: ", distancia_percorrida, " Km\n")
+      escreva("Combustível gasto: ", combustivel_gasto, " Litros\n")
+      escreva("--------------------------------------------------\n")
+      escreva("O CONSUMO MÉDIO do veículo é de ", consumo_medio, " Km/L\n")
+      escreva("--------------------------------------------------\n")
+    }
+    senao 
+    {
+      escreva("\nERRO: O consumo de combustível não pode ser zero. Não é possível calcular o Km/L.\n")
+    }
+  }
+}
