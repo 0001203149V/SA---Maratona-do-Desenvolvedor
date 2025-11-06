@@ -1,0 +1,11 @@
+programa {
+  funcao inicio() {
+    inteiro i
+    escreva("--- Lista de Números Ímpares de 1 até 50 ---\n")
+    escreva("*********************************************\n")
+    para (i = 1; i <= 50; i = i + 2) {
+      escreva(i, "\n")
+    }
+    escreva("*********************************************\n")
+  }
+}
