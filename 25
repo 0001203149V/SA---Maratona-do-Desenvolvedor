@@ -1,0 +1,29 @@
+programa {
+  funcao inicio() {
+    inteiro opcao
+    real valor, resultado
+    escreva("===== CONVERSOR DE TEMPERATURA =====\n")
+    escreva("1 - Celsius para Fahrenheit\n")
+    escreva("2 - Fahrenheit para Celsius\n")
+    escreva("=====================================\n")
+    escreva("Escolha a opчуo desejada: ")
+    leia(opcao)
+    escolha(opcao)
+    {
+      caso 1:
+      escreva("Digite a temperatura em Celsius: ")
+      leia(valor)
+      resultado = (valor * 9 / 5) + 32
+      escreva("Resultado: ", valor, " АC = ", resultado, " АF\n")
+      pare
+      caso 2:
+      escreva("Digite a temperatura em Fahrenheit: ")
+      leia(valor)
+      resultado = (valor - 32) * 5 / 9
+      escreva("Resultado: ", valor, " АF = ", resultado, " АC\n")
+      pare
+      caso contrario:
+      escreva("Opção inválida!\n")
+    }
+  }
+}
