@@ -1,0 +1,23 @@
+programa {
+  funcao inicio() {
+    const inteiro TOTAL_FUNCIONARIOS = 5
+    real salario_atual
+    real soma_salarios = 0.0
+    real media_salarial
+    inteiro contador
+    escreva("--- Calculadora de Média Salarial (RH/TI) ---\n")
+    escreva("Precisamos do salário de ", TOTAL_FUNCIONARIOS, " funcionários.\n\n")
+    para (contador = 1; contador <= TOTAL_FUNCIONARIOS; contador++) {
+      escreva("Digite o salário do ", contador, "º funcionário: R$ ")
+      leia(salario_atual)
+      soma_salarios = soma_salarios + salario_atual
+    }
+    media_salarial = soma_salarios / TOTAL_FUNCIONARIOS
+    escreva("\n*************************************************\n")
+    escreva("? DADOS COLETADOS E PROCESSADOS:\n")
+    escreva("  - Soma total dos salários: R$ ", soma_salarios, "\n")
+    escreva("  - Número de funcionários: ", TOTAL_FUNCIONARIOS, "\n")
+    escreva("  - Média salarial do setor de TI: R$ ", media_salarial, "\n")
+    escreva("*************************************************\n")
+  }
+}
