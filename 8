@@ -1,0 +1,23 @@
+programa {
+  funcao inicio() {
+    real velocidade_carro
+    const real LIMITE_VELOCIDADE = 80.0
+    escreva(" Verificaзгo de Multa - DETRAN\n")
+    escreva("----------------------------------\n")
+    escreva("O limite de velocidade da via й ", LIMITE_VELOCIDADE, " Km/h.\n")
+    escreva("Por favor, digite a velocidade do carro em Km/h: ")
+    leia(velocidade_carro)
+    escreva("\n--- Resultado da Verificaзгo ---\n")
+    se (velocidade_carro > LIMITE_VELOCIDADE)
+  {
+    escreva(" VELOCIDADE: ", velocidade_carro, " Km/h\n")
+    escreva(" **Multado!** Vocк excedeu o limite de ", LIMITE_VELOCIDADE, " Km/h.\n")
+  }
+  senao
+  {
+    escreva(" VELOCIDADE: ", velocidade_carro, " Km/h\n")
+    escreva(" **Dentro do limite.** Boa viagem!\n")
+  }
+  escreva("----------------------------------\n")
+  }
+}
