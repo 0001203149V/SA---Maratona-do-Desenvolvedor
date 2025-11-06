@@ -1,0 +1,25 @@
+programa {
+  funcao inicio() {
+    real valor_hora_normal 
+    real quantidade_horas_extras 
+    real valor_hora_extra
+    real total_pagar_extras
+
+    escreva("Digite o valor da hora de trabalho normal (R$): ")
+    leia(valor_hora_normal)
+
+    escreva("Digite a quantidade de horas extras trabalhadas: ")
+    leia(quantidade_horas_extras)
+
+    valor_hora_extra = valor_hora_normal * 1.5
+    total_pagar_extras = valor_hora_extra * quantidade_horas_extras
+
+    escreva("\n-------------------------------------------")
+    escreva("\n? Cálculo do Pagamento de Horas Extras")
+    escreva("\nValor da Hora Extra (com 50% de adicional): R$", total_pagar_extras / quantidade_horas_extras)
+    escreva("\nTotal de Horas Extras: ", quantidade_horas_extras)
+    escreva("\n")
+    escreva("\nVALOR TOTAL A SER PAGO PELAS HORAS EXTRAS: R$", total_pagar_extras)
+    escreva("\n-------------------------------------------")
+  }
+}
