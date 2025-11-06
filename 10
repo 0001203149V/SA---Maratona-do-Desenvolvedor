@@ -1,0 +1,23 @@
+programa {
+  funcao inicio() {
+    real saldo_conta, valor_saque, novo_saldo
+    escreva("Digite o saldo atual da conta (R$): ")
+    leia(saldo_conta)
+    escreva("Digite o valor que deseja sacar (R$): ")
+    leia(valor_saque)
+    escreva("\n--- Verificando Saque ---\n")
+    escreva("Saldo atual: R$ ", saldo_conta, "\n")
+    escreva("Valor do saque: R$ ", valor_saque, "\n")
+    se (saldo_conta >= valor_saque)
+    {
+      novo_saldo = saldo_conta - valor_saque
+      escreva("\n Saque realizado com sucesso!")
+      escreva("\nNovo Saldo: R$ ", novo_saldo, "\n")
+    }
+    senao
+    {
+      escreva("\n Saldo insuficiente.")
+      escreva("\nSaldo disponível: R$ ", saldo_conta, "\n")
+    }
+  }
+}
