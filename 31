@@ -1,0 +1,19 @@
+programa {
+  funcao inicio() {
+    inteiro numero
+    inteiro contador
+    inteiro resultado
+    escreva("--- Calculadora de Tabuada ---\n")
+    escreva("Digite um número inteiro para ver a tabuada: ")
+    leia(numero)
+    escreva("\n")
+    escreva("**************************************\n")
+    escreva("    Tabuada do número ", numero, "\n")
+    escreva("**************************************\n")
+    para (contador = 1; contador <= 10; contador++) {
+      resultado = numero * contador
+      escreva(numero, " x ", contador, " = ", resultado, "\n")
+    }
+    escreva("**************************************\n")
+  }
+}
