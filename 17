@@ -1,0 +1,30 @@
+programa {
+  funcao inicio() {
+    real media_final
+    real frequencia_percentual
+    const real MEDIA_MINIMA = 7.0
+    const real FREQUENCIA_MINIMA = 75.0
+    escreva(" Verificação de Aprovação Escolar\n")
+    escreva("Por favor, digite a Mйdia Final do aluno")
+    leia(media_final)
+    escreva("Por favor, digite o percentual de Frequкncia")
+    leia(frequencia_percentual)
+    escreva("\n--- Resultado da Situação ---\n")
+    se (media_final >= MEDIA_MINIMA e frequencia_percentual >= FREQUENCIA_MINIMA)
+    {
+      escreva(" **Aprovado!\n")
+      escreva("Mйdia: ", media_final, " (>= ", MEDIA_MINIMA, ") | Frequência: ", frequencia_percentual, "% (>= ", FREQUENCIA_MINIMA, "%)\n")
+    }
+    senao
+    {
+      escreva("Reprovado.\n")
+      escreva("Motivos da Reprovaзгo: \n")
+      se (media_final < MEDIA_MINIMA) {
+        escreva("- Mйdia final (", media_final, ") abaixo da mínima (", MEDIA_MINIMA, ").\n")
+      }
+      se (frequencia_percentual < FREQUENCIA_MINIMA) {
+        escreva("- Frequкncia (", frequencia_percentual, "%) abaixo da mínima (", FREQUENCIA_MINIMA, "%).\n")
+      }
+    }
+  }
+}
