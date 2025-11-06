@@ -1,0 +1,30 @@
+programa {
+  funcao inicio() {
+    inteiro codigo
+    escreva("===== SETORES RH =====\n")
+    escreva("1 - Financeiro\n")
+    escreva("2 - TI\n")
+    escreva("3 - Marketing\n")
+    escreva("4 - Operaушes\n")
+    escreva("=======================\n")
+    escreva("Digite o cзdigo do setor: ")
+    leia(codigo)
+    escolha(codigo)
+    {
+      caso 1:
+      escreva("Setor: Financeiro\n")
+      pare
+      caso 2:
+      escreva("Setor: TI\n")
+      pare
+      caso 3:
+      escreva("Setor: Marketing\n")
+      pare
+      caso 4:
+      escreva("Setor: Operaушes\n")
+      pare
+      caso contrario:
+      escreva("Cзdigo invрlido\n")
+    }
+  }
+}
