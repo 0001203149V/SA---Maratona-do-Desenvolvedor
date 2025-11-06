@@ -1,0 +1,33 @@
+programa {
+  funcao inicio() {
+    cadeia estado
+    real frete
+    escreva("===== CÁLCULO DE FRETE =====\n")
+    escreva("Estados disponíveis: SP, RJ, MG, BA\n")
+    escreva("=============================\n")
+    escreva("Digite a sigla do seu estado: ")
+    leia(estado)
+    estado = maiusculo(estado)
+    escolha(estado)
+    {
+      caso "SP":
+      frete = 10.0
+      escreva("Frete para São Paulo: R$ ", frete, "\n")
+      pare
+      caso "RJ":
+      frete = 15.0
+      escreva("Frete para Rio de Janeiro: R$ ", frete, "\n")
+      pare
+      caso "MG":
+      frete = 12.0
+      escreva("Frete para Minas Gerais: R$ ", frete, "\n")
+      pare
+      caso "BA":
+      frete = 20.0
+      escreva("Frete para Bahia: R$ ", frete, "\n")
+      pare
+      caso contrario:
+      escreva("Frete não disponível para este estado.\n")
+    }
+  }
+}
