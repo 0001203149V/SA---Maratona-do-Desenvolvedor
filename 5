@@ -1,0 +1,25 @@
+programa {
+  funcao inicio() {
+    real valor_original
+    const real TAXA_DESCONTO = 0.10
+    real valor_desconto
+    real novo_preco
+
+    escreva("Desconto Simples em Loja\n")
+    escreva("------------------------------------\n")
+    escreva("Digite o valor original do produto (R$): ")
+    leia(valor_original)
+
+    valor_desconto = valor_original * TAXA_DESCONTO
+    novo_preco = valor_original - valor_desconto
+
+    escreva("\n------------------------------------")
+    escreva("\n? Resultado do Desconto de 10%")
+    escreva("\n")
+    escreva("Valor Original: R$", valor_original)
+    escreva("\nValor do Desconto (10%): R$", valor_desconto)
+    escreva("\n")
+    escreva("NOVO PREÇO COM DESCONTO: R$", novo_preco)
+    escreva("\n------------------------------------")
+  }
+}
