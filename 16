@@ -1,0 +1,33 @@
+programa {
+  funcao inicio() {
+    real renda_mensal
+    inteiro restricao_spc
+    const real RENDA_MINIMA = 2000.00
+    escreva(" Sistema de Aprovação de Empréstimo\n")
+    escreva("----------------------------------------\n")
+    escreva("Por favor, digite a sua Renda Mensal (Ex: 2500.50): R$ ")
+    leia(renda_mensal)
+    escreva("\nVocЖ possui restrição no SPC/SERASA?\n")
+    escreva("1 - Sim\n")
+    escreva("2 - Não\n")
+    escreva("Digite sua opção (1 ou 2): ")
+    leia(restricao_spc)
+    escreva("\n--- Resultado da Anрlise ---\n")
+    se (renda_mensal > RENDA_MINIMA e restricao_spc == 2)
+    {
+      escreva("Empréstimo aprovado!\n")
+      escreva("Parabжns, suas condições atendem aos requisitos do banco.\n")
+    }
+    senao
+    {
+      escreva("Emprжstimo negado\n")
+      escreva("Motivos: \n")
+      se (renda_mensal <= RENDA_MINIMA) {
+        escreva("- Renda mensal (R$ ", renda_mensal, ") não é superior a R$ ", RENDA_MINIMA, ".\n")
+      }
+      se (restricao_spc == 1) {
+        escreva("- Possui restrição no SPC/SERASA.\n")
+      }
+    }
+  }
+}
