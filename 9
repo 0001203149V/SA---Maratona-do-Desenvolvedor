@@ -1,0 +1,23 @@
+programa {
+  funcao inicio() {
+    real valor_compra, valor_final, valor_desconto
+    const real LIMITE_DESCONTO = 200.00 
+    const real TAXA_DESCONTO = 0.15
+    escreva("Digite o valor total da compra (R$): ")
+    leia(valor_compra)
+    valor_final = valor_compra
+    se (valor_compra > LIMITE_DESCONTO)
+    {
+      valor_desconto = valor_compra * TAXA_DESCONTO
+      valor_final = valor_compra - valor_desconto
+      escreva("\n-- Desconto Aplicado (15%) --\n")
+      escreva("Valor do Desconto: R$ ", valor_desconto, "\n")
+    }
+    senao
+    {
+      escreva("\n-- Sem Desconto --\n")
+      escreva("A compra precisa ser maior que R$ ", LIMITE_DESCONTO, " para ter 15% de desconto.\n")
+    }
+    escreva("\nValor Final a Pagar: R$ ", valor_final, "\n")
+  }
+}
