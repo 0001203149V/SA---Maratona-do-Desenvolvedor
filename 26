@@ -1,0 +1,17 @@
+programa {
+  funcao inicio() {
+    cadeia senha_correta = "SENAI123"
+    cadeia senha_digitada = ""
+    faca
+    {
+      escreva("Digite a senha: ")
+      leia(senha_digitada)
+      se (senha_digitada != senha_correta)
+      {
+        escreva("Senha incorreta. Tente novamente.\n")
+      }
+    } enquanto (senha_digitada != senha_correta)
+    escreva("\nSenha correta! Acesso liberado.")
+    
+  }
+}
