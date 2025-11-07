@@ -1,0 +1,56 @@
+programa {
+  funcao inicio() {
+    inteiro votos_a = 0
+    inteiro votos_b = 0
+    inteiro votos_nulos = 0
+    inteiro total_votos = 0
+    inteiro voto_candidato
+    const inteiro VOTO_A = 1
+    const inteiro VOTO_B = 2
+    const inteiro VOTO_NULO_BRANCO = 3
+    const inteiro ENCERRA_VOTACAO = 0
+    escreva("--- ??? URNA ELETRÔNICA - ELEIÇÕES --- \n")
+    escreva("Opções de voto:\n")
+    escreva("  [1] Candidato A\n")
+    escreva("  [2] Candidato B\n")
+    escreva("  [3] Branco/Nulo\n")
+    escreva("-------------------------------------\n")
+    escreva("Digite [0] para encerrar a votação.\n\n")
+    faca {
+      escreva("Digite seu voto (1, 2, 3 ou 0 para encerrar): ")
+      leia(voto_candidato)
+      se (voto_candidato != ENCERRA_VOTACAO) {
+        se (voto_candidato == VOTO_A) {
+          votos_a = votos_a + 1
+          escreva("Voto para Candidato A registrado.\n")
+          } senao se (voto_candidato == VOTO_B) {
+            votos_b = votos_b + 1
+            escreva("Voto para Candidato B registrado.\n")
+            } senao se (voto_candidato == VOTO_NULO_BRANCO) {
+              votos_nulos = votos_nulos + 1
+              escreva("Voto Branco/Nulo registrado.\n")
+              } senao {
+                escreva("?? Voto inválido! Por favor, digite 1, 2, 3 ou 0.\n")
+              }
+              total_votos = total_votos + 1
+      }
+      escreva("\n") 
+      } enquanto (voto_candidato != ENCERRA_VOTACAO) 
+      escreva("--- APURAÇÃO E RESULTADO ---\n")
+      escreva("Votação encerrada pelo mesário.\n")
+      escreva("Total de votos processados: ", total_votos, "\n")
+      escreva("-------------------------------------\n")
+      escreva("Candidato A: ", votos_a, " votos\n")
+      escreva("Candidato B: ", votos_b, " votos\n")
+      escreva("Branco/Nulo: ", votos_nulos, " votos\n")
+      escreva("-------------------------------------\n")
+      se (votos_a > votos_b) {
+        escreva("?? O VENCEDOR É: Candidato A!\n")
+        } senao se (votos_b > votos_a) {
+          escreva("?? O VENCEDOR É: Candidato B!\n")
+          } senao {
+            escreva("?? RESULTADO: EMPATE entre Candidato A e Candidato B!\n")
+          }
+          escreva("-------------------------------------\n")
+  }
+}
