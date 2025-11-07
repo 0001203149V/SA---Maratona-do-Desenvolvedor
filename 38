@@ -1,0 +1,37 @@
+programa {
+  funcao inicio() {
+    real nota_aluno
+    real soma_notas = 0.0
+    real media_turma
+    inteiro total_alunos = 0
+    inteiro aprovados = 0
+    const real NOTA_PARADA = -1.0
+    const real NOTA_MINIMA_APROVACAO = 7.0
+    escreva("--- Calculadora de Média e Aprovação da Turma ---\n")
+    escreva("Digite as notas dos alunos (use ponto como separador decimal).\n")
+    escreva("Para finalizar a inserção de notas, digite **-1**.\n\n")
+    faca {
+      escreva("Digite a nota do aluno: ")
+      leia(nota_aluno)
+      se (nota_aluno != NOTA_PARADA) {
+        soma_notas = soma_notas + nota_aluno
+        total_alunos = total_alunos + 1
+        se (nota_aluno >= NOTA_MINIMA_APROVACAO) {
+          aprovados = aprovados + 1
+        }
+      }
+      } enquanto (nota_aluno != NOTA_PARADA)
+      escreva("\n--- Processamento Finalizado ---\n")
+      se (total_alunos > 0) {
+        media_turma = soma_notas
+        escreva("****************************************\n")
+        escreva("RESULTADO DA TURMA:\n")
+        escreva("  Total de alunos processados: ", total_alunos, "\n")
+        escreva("  Mйdia Geral da Turma: ", media_turma, "\n")
+        escreva("  Alunos aprovados (nota >= 7.0): ", aprovados, "\n")
+        escreva("****************************************\n")
+        } senao {
+          escreva("Nenhuma nota válida foi inserida. Processamento encerrado.\n")
+        }
+  }
+}
