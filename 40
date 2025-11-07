@@ -1,0 +1,32 @@
+programa {
+  funcao inicio() {
+    const inteiro LIMITE = 10
+    inteiro numero_digitado
+    inteiro maior_numero
+    inteiro menor_numero
+    inteiro contador
+    escreva("--- Localizador de Máximo e Mínimo ---\n")
+    escreva("Você deverá digitar ", LIMITE, " números inteiros.\n\n")
+    para (contador = 1; contador <= LIMITE; contador++) {
+      escreva("Digite o ", contador, "º número: ")
+      leia(numero_digitado)
+      se (contador == 1) {
+        maior_numero = numero_digitado
+        menor_numero = numero_digitado
+      }
+      senao {
+        se (numero_digitado > maior_numero) {
+          maior_numero = numero_digitado
+        }
+        se (numero_digitado < menor_numero) {
+          menor_numero = numero_digitado
+        }
+      }
+    }
+    escreva("\n**************************************\n")
+    escreva("? Processamento concluído.\n")
+    escreva("O MAIOR número digitado foi: ", maior_numero, "\n")
+    escreva("O MENOR número digitado foi: ", menor_numero, "\n")
+    escreva("**************************************\n")
+  }
+}
